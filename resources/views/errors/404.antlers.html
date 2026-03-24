@@ -1,1 +1,26 @@
-<p>404 Page not found.</p>
+<section  class="bg-black py-12">
+    <div class="container mx-auto px-4 py-20 text-center">
+        {{ if error_page:heading }}
+            <h1 class="text-white font-manrope font-semibold text-center text-6xl">{{ error_page:heading }}</h1>
+        {{ /if }}
+
+        {{ if error_page:content }}
+            <p class="text-gray text-lg text-center my-8">{{ error_page:content }}</p>
+        {{ /if }}
+
+        <div class="flex justify-center gap-4 mt-8">
+            {{ if error_page:button_one }}
+                {{ error_page:button_one }}
+                    <a class="bg-orange text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-white hover:text-orange transition-all duration-500" href="{{ link }}">{{ text }}</a>
+                {{ /error_page:button_one }}
+            {{ /if }}
+
+            {{ if error_page:button_two }}
+                {{ error_page:button_two }}
+                    <a class="bg-gray text-black rounded-full px-6 py-2 font-semibold shadow hover:bg-navy hover:text-gray transition-all duration-500" href="{{ link }}">{{ text }}</a>
+                {{ /error_page:button_two }}
+            {{ /if }}
+        </div>
+    </div>
+</section>
+    

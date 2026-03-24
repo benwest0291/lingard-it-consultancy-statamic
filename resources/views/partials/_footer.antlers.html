@@ -1,0 +1,127 @@
+<footer class="bg-black px-2 lg:px-4 pb-4 pt-11">
+    <div class="container mx-auto footer-bg-image">
+        <div class="p-8 bg-white-opacity rounded-3xl border border-white-opacity">
+           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    {{ if company_details:logo }}
+                        {{ company_details:logo }}
+                            <a href="/" title="Lingard IT Consultancy">
+                                <img class="w-[160px] mb-8" src="{{ glide:url fit='crop_focal' format='webp' }}" alt="{{ alt }}">
+                            </a>
+                        {{ /company_details:logo }}
+                    {{ /if }}
+
+                    {{ if company_details:textarea }}
+                        <p class="text-gray mt-4 w-3/4">{{ company_details:textarea }}</p>
+                    {{ /if }}
+
+                    <div>
+                        {{ if company_details:phone_number }}
+                            <div class="flex items-center mt-10">
+                                <i class="fa-solid fa-phone text-white me-2 text-lg"></i>
+                                <a class="text-gray hover:text-white transform transition-all underline decoration-orange" href="tel:{{ company_details:phone_number }}">{{ company_details:phone_number }}</a>
+                            </div>
+                        {{ /if }}
+
+                        {{ if company_details:email_address }}
+                            <div class="flex items-center mt-2">
+                                <i class="fa-solid fa-envelope text-white me-2 text-lg"></i>
+                                <a class="text-gray hover:text-white transform transition-all underline decoration-orange" href="mailto:{{ company_details:email_address }}">{{ company_details:email_address }}</a>
+                            </div>
+                        {{ /if }}
+                    </div>
+
+                    <div class="mt-10 flex gap-2">
+                        {{ if company_details:linkedin }}
+                            <div class="flex items-center mt-2">
+                                <a class="group text-gray hover:text-white transform transition-all" href="{{ company_details:linkedin }}" target="_blank">
+                                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-orange transition-colors duration-200 group-hover:bg-white">
+                                        <i class="fa-brands fa-linkedin text-white text-lg transition-colors duration-400 group-hover:text-orange-500"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        {{ /if }}
+
+                        {{ if company_details:facebook }}
+                            <div class="flex items-center mt-2">
+                                <a class="group text-gray hover:text-white transform transition-all" href="{{ company_details:facebook }}" target="_blank">
+                                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-orange transition-colors duration-200 group-hover:bg-white">
+                                        <i class="fa-brands fa-facebook-f text-white text-lg transition-colors duration-400 group-hover:text-orange-500"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        {{ /if }}
+
+                        {{ if company_details:twitter_x }}
+                            <div class="flex items-center mt-2">
+                                <a class="group text-gray hover:text-white transform transition-all" href="{{ company_details:twitter_x }}" target="_blank">
+                                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-orange transition-colors duration-200 group-hover:bg-white">
+                                        <i class="fa-brands fa-x-twitter text-white text-lg transition-colors duration-200 group-hover:text-orange-500"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        {{ /if }}
+                    </div>
+
+                    {{ if company_details:strapline }}
+                        <p class="text-gray mt-10">{{ company_details:strapline }}</p>
+                    {{ /if }}
+                </div>
+
+                <div class="mt-3 lg:my-8">
+                    {{ if company_details:column_one_heading }}
+                        <h4 class="text-white font-manrope text-[20px] font-semibold">{{ company_details:column_one_heading }}</h4>
+                    {{ /if }}
+
+                    <ul class="mt-4">
+                        {{ nav:footer_column_one}}
+                            <li>
+                                <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
+                            </li>
+                        {{ /nav:footer_column_one }}
+                    </ul>
+                </div>
+
+                <div class="mt-3 lg:mt-8">
+                    {{ if company_details:column_two_heading }}
+                        <h4 class="text-white font-manrope text-[20px] font-semibold">{{ company_details:column_two_heading }}</h4>
+                    {{ /if }}
+
+                    <ul class="mt-4">
+                        {{ nav:footer_column_two }}
+                            <li>
+                                <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
+                            </li>
+                        {{ /nav:footer_column_two }}
+                    </ul>
+                </div>
+
+                <div class="mt-3 lg:mt-8">
+                    {{ if company_details:column_three_heading }}
+                        <h4 class="text-white font-manrope text-[20px] font-semibold">{{ company_details:column_three_heading }}</h4>
+                    {{ /if }}
+
+                    <ul class="mt-4">
+                        {{ nav:footer_column_three }}
+                            <li>
+                                <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
+                            </li>
+                        {{ /nav:footer_column_three }}
+                    </ul>
+                </div>
+           </div>
+        </div>
+
+        <div class="grid grid-col-1 lg:grid-cols-2 mt-5">
+            <div class="text-gray text-center lg:text-left">
+                {{ if company_details:base_text }}
+                    © {{? echo date("Y") ?}}  {{ company_details:base_text }}
+                {{ /if }}
+            </div>
+
+            <div class="text-gray flex justify-center lg:justify-end mt-4 lg:mt-0">
+                <a href="https://benwest.dev" class="text-gray hover:text-white">Website By Ben West 🤓</a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,86 @@
+title: 'Company Details'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Details
+        fields:
+          -
+            handle: logo
+            field:
+              container: assets
+              mode: grid
+              max_files: 1
+              min_files: 1
+              type: assets
+              display: Logo
+              width: 50
+          -
+            handle: textarea
+            field:
+              type: textarea
+              display: Textarea
+              width: 50
+          -
+            handle: strapline
+            field:
+              type: text
+              display: Strapline
+              width: 50
+          -
+            handle: phone_number
+            field:
+              type: text
+              display: 'Phone Number'
+              width: 50
+          -
+            handle: email_address
+            field:
+              type: text
+              display: 'Email Address'
+              width: 50
+          -
+            handle: linkedin
+            field:
+              type: text
+              display: Linkedin
+              width: 50
+          -
+            handle: facebook
+            field:
+              type: text
+              display: Facebook
+              width: 50
+          -
+            handle: twitter_x
+            field:
+              type: text
+              display: 'Twitter X'
+              width: 50
+  footer:
+    display: Footer
+    sections:
+      -
+        display: Footer
+        fields:
+          -
+            handle: column_one_heading
+            field:
+              type: text
+              display: 'Column One Heading'
+          -
+            handle: column_two_heading
+            field:
+              type: text
+              display: 'Column Two Heading'
+          -
+            handle: column_three_heading
+            field:
+              type: text
+              display: 'Column Three Heading'
+          -
+            handle: base_text
+            field:
+              type: text
+              display: 'Base Text'

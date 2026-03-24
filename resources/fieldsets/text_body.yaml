@@ -1,0 +1,9 @@
+title: 'Text Body'
+fields:
+  -
+    handle: content
+    field:
+      container: assets
+      remove_empty_nodes: false
+      type: bard
+      display: Content

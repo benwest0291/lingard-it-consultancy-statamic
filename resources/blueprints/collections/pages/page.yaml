@@ -1,0 +1,68 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: pages_replicator
+            field:
+              type: replicator
+              display: 'Pages Replicator'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    masthead:
+                      display: Masthead
+                      icon: align-object-top
+                      fields:
+                        -
+                          import: masthead
+                          prefix: masthead_
+                    banner:
+                      display: Banner
+                      icon: align-object-top
+                      fields:
+                        -
+                          import: banner
+                          prefix: banner_
+                    breadcrumbs:
+                      display: Breadcrumbs
+                      icon: dots
+                      fields:
+                        -
+                          import: breadcrumbs
+                    text_body:
+                      display: 'Text Body'
+                      icon: fieldtype-textarea
+                      fields:
+                        -
+                          import: text_body
+                          prefix: text_body_
+                    frequently_asked_questions:
+                      display: 'Frequently Asked Questions'
+                      icon: tabs-sections
+                      fields:
+                        -
+                          import: frequently_asked_questions
+                          prefix: frequently_asked_questions_
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

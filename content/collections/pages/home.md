@@ -1,16 +1,22 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: page
+author: 6495e361-3c5a-48bf-8591-05aa0308e74f
+updated_by: 6495e361-3c5a-48bf-8591-05aa0308e74f
+updated_at: 1774368282
+pages_replicator:
+  -
+    id: C8aQxotdZqAfXQ8_w-LdM
+    type: masthead
+    enabled: true
+    masthead_heading: 'Reliable IT that keeps your business running  <span class="text-orange">without the stress</span>.'
+    masthead_content: 'We handle technology so you dont have to proactive monitoring, security first approach, and fast response times for growing companies.'
+    masthead_button_one:
+      text: 'Book a Consolation'
+      link: 'entry::5d25149a-22db-467c-9c9b-0b860511d6ad'
+    masthead_button_two:
+      text: 'View Our Services'
+      link: 'entry::0600f12e-b85f-472d-9e59-1056ccffe666'
 ---
-## Welcome to your brand new Statamic site!
-
-Not sure what to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
-
-- [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
-- [Head to the docs](https://statamic.dev) and learn how Statamic works.
-- [Watch some Statamic videos](https://youtube.com/statamic) on YouTube.
-- [Join our Discord chat](https://statamic.com/discord) and meet thousands of other Statamic developers.
-- [Start a discussion](https://github.com/statamic/cms/discussions) and get answers to your questions.
-- [Star Statamic on Github](https://github.com/statamic/cms) if you enjoy using it!

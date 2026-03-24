@@ -1,0 +1,8 @@
+heading: '404'
+content: 'Oh S**t, something has gone wrong or missing.. our bad!'
+button_one:
+  text: 'Back To Home'
+  link: 'entry::home'
+button_two:
+  text: 'View Our Services'
+  link: 'entry::0600f12e-b85f-472d-9e59-1056ccffe666'

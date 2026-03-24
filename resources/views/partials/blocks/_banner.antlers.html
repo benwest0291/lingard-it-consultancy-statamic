@@ -1,0 +1,15 @@
+<section class="bg-black">
+    <div class="container mx-auto px-4 py-20 text-center">
+        {{ if !banner_heading }}
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">{{ title }}</h1>
+        {{ else }}
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">{{ banner_heading }}</h1>
+        {{ /if}}
+
+        {{ if banner_content }}
+            <div class="flex justify-center">
+                <p class="text-lg md:text-lg text-gray mb-8 lg:w-1/2">{{ banner_content }}</p>
+            </div>
+        {{ /if }}
+    </div>
+</section>

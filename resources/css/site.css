@@ -1,4 +1,99 @@
 @import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/inter";
 @plugin "@tailwindcss/typography";
 @source "../views";
 @source "../../content";
+
+
+@theme {
+    /* Base colours */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-orange: #F48500;
+    --color-charcoal: #A1A1AA;
+    --color-off-white: #F7F7F5;
+    --color-gray: #E5E5E5;
+    --color-text: #6B7280;
+    --color-light-orange: #FF9A2A;
+    --color-navy: #0F172A;
+    --color-white-opacity: rgba(255, 255, 255, 0.05);
+    /* Fonts */
+    --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-raleway: "Raleway", ui-sans-serif, sans-serif;
+    --font-manrope: "Manrope Variable", ui-sans-serif, sans-serif;
+    --font-inter: "Inter Variable", ui-sans-serif, sans-serif;
+
+    /* Breakpoints */
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+    --screen-xl: 1280px;
+    --screen-2xl: 1536px;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.footer-bg-image {
+    position: relative;
+}
+
+.footer-bg-image:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -50px;
+        bottom: 70px;
+        height: 479px;
+        width: 320px;
+        background-image: url('http://127.0.0.1:8000/assets/code/g-20.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .footer-bg-image:after {
+        top: 0;
+        bottom: auto;
+    }
+}
+
+.masthead-bg-image {
+    position: relative;
+}
+
+.masthead-bg-image:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -130px;
+    bottom: 70px;
+    height: 600px;
+    width: 420px;
+    background-image: url('http://127.0.0.1:8000/assets/code/g-40.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .masthead-bg-image:after {
+        top: 0;
+        bottom: auto;
+    }
+}
+
+.bard {
+    color: var(--color-text);
+    font-family: var(--font-inter);
+    line-height: 1.75;
+}

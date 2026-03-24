@@ -1,0 +1,12 @@
+<section class="bg-black lg:py-2 pb-2 pt-3">
+    <div class="container mx-auto px-4">
+           <ul class="flex flex-wrap">
+            {{ nav:breadcrumbs }}
+                <li class="me-2">
+                    <a class="!pl-0 font-manrope {{ if is_current }}text-orange font-semibold{{ else }}text-white{{ /if }}" title="{{ title }}" href="{{ url }}">{{ title }}</a>
+                    {{ unless is_current }}<i class="fa-solid fa-chevron-right ms-2 text-gray text-[12px]"></i> {{ /unless }}
+                </li>
+            {{ /nav:breadcrumbs }}
+        </ul>
+    </div>
+</section>
