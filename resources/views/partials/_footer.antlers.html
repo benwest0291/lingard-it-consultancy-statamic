@@ -1,6 +1,6 @@
 <footer class="bg-black px-2 lg:px-4 pb-4 pt-11">
     <div class="container mx-auto footer-bg-image">
-        <div class="p-8 bg-white-opacity rounded-3xl border border-white-opacity">
+        <div class="p-8 bg-white-opacity rounded-4xl border border-white-opacity">
            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 <div>
                     {{ if company_details:logo }}
@@ -75,7 +75,7 @@
 
                     <ul class="mt-4">
                         {{ nav:footer_column_one}}
-                            <li>
+                            <li class="mb-2">
                                 <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
                             </li>
                         {{ /nav:footer_column_one }}
@@ -89,7 +89,7 @@
 
                     <ul class="mt-4">
                         {{ nav:footer_column_two }}
-                            <li>
+                            <li class="mb-2">
                                 <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
                             </li>
                         {{ /nav:footer_column_two }}
@@ -103,7 +103,7 @@
 
                     <ul class="mt-4">
                         {{ nav:footer_column_three }}
-                            <li>
+                            <li class="mb-2">
                                 <a class="text-gray hover:text-white transform transition-all" href="{{ url }}">{{ title }}</a>
                             </li>
                         {{ /nav:footer_column_three }}

@@ -1,0 +1,46 @@
+title: Values
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: testimonials_replicator
+            field:
+              type: replicator
+              display: 'Testimonials Replicator'
+              sets:
+                testimonial_card:
+                  display: 'Testimonial Card'
+                  icon: quote
+                  sets:
+                    card:
+                      display: Card
+                      fields:
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
+                        -
+                          handle: avatar
+                          field:
+                            container: assets
+                            type: assets
+                            display: Avatar
+                        -
+                          handle: name
+                          field:
+                            type: text
+                            display: Name
+                        -
+                          handle: job_title
+                          field:
+                            type: text
+                            display: 'Job Title'

@@ -29,6 +29,12 @@ tabs:
               display: Strapline
               width: 50
           -
+            handle: opening_hours
+            field:
+              type: text
+              display: 'Opening Hours'
+              width: 50
+          -
             handle: phone_number
             field:
               type: text

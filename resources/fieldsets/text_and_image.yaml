@@ -1,0 +1,44 @@
+title: 'Text And Image'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+      width: 50
+  -
+    handle: image_left
+    field:
+      type: toggle
+      display: 'Image Left'
+      width: 50
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: image
+    field:
+      container: assets
+      mode: grid
+      max_files: 1
+      min_files: 1
+      type: assets
+      display: Image
+  -
+    handle: button
+    field:
+      type: group
+      display: Button
+      fields:
+        -
+          handle: text
+          field:
+            type: text
+            display: Text
+        -
+          handle: link
+          field:
+            type: link
+            display: Link

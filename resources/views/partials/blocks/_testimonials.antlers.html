@@ -1,0 +1,42 @@
+<section  class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        {{ if testimonials:heading }}
+            <div class="text-white font-manrope font-semibold text-center text-2xl lg:text-3xl">{{ testimonials:heading }}</div>
+        {{ /if }}
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-10">
+            {{ testimonials:testimonials_replicator }}
+                <div class="p-6 bg-white-opacity rounded-4xl border border-white-opacity">
+                    <div class="flex mb-4 gap-1">
+                        <i class="fa-solid fa-star text-orange"></i>
+                        <i class="fa-solid fa-star text-orange"></i>
+                        <i class="fa-solid fa-star text-orange"></i>
+                        <i class="fa-solid fa-star text-orange"></i>
+                        <i class="fa-solid fa-star text-orange"></i>
+                    </div>
+               
+                    {{ if content }}
+                        <p class="text-white">"{{ content }}"</p>
+                    {{ /if }}
+
+                    <hr class="border border-white-opacity my-4">
+
+                    <div class="flex gap-4">
+                        {{ if avatar }}
+                            {{ avatar }}
+                                <div class="w-10 h-10 rounded-full overflow-hidden mb-2 bg-navy border border-white-opacity">
+                                    <img loading="lazy" class="object-cover w-full h-full" src="{{ url }}" alt="{{ alt }}">
+                                </div>
+                            {{ /avatar }}
+                        {{ /if }}
+                
+                        <div>
+                            <div class="text-gray text-md text-white">{{ name }}</div>
+                            <div class="text-gray text-xs">{{ job_title }}</div>
+                        </div>
+                    </div>
+                </div>
+            {{ /testimonials:testimonials_replicator }}
+        </div>
+    </div>
+</section>

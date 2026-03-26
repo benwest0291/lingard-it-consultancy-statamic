@@ -1,0 +1,28 @@
+<section  class="bg-black py-12 px-4">
+    <div class="container mx-auto text-center flex items-center justify-center">
+        <div class="bg-white-opacity rounded-4xl border border-white-opacity px-4 py-20 lg:w-1/2">
+                {{ if call_to_action_heading }}
+                    <h1 class="text-white font-manrope font-semibold text-center text-4xl lg:text-5xl">{{ call_to_action_heading }}</h1>
+                {{ /if }}
+
+                {{ if call_to_action_content }}
+                    <p class="text-gray text-lg text-center my-8">{{ call_to_action_content }}</p>
+                {{ /if }}
+
+                <div class="flex justify-center gap-4 mt-8">
+                    {{ if call_to_action_button_one }}
+                        {{ call_to_action_button_one }}
+                            <a class="bg-orange text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-white hover:text-orange transition-all duration-500" href="{{ link }}">{{ text }}</a>
+                        {{ /call_to_action_button_one }}
+                    {{ /if }}
+
+                    {{ if call_to_action_button_two }}
+                        {{ call_to_action_button_two }}
+                            <a class="bg-gray text-black rounded-full px-6 py-2 font-semibold shadow hover:bg-navy hover:text-gray transition-all duration-500" href="{{ link }}">{{ text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
+                        {{ /call_to_action_button_two }}
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+</section>
+    

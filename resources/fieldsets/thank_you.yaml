@@ -1,0 +1,24 @@
+title: 'Thank You'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: call_heading
+    field:
+      type: text
+      display: 'Call Heading'
+      width: 50
+  -
+    handle: email_heading
+    field:
+      type: text
+      display: 'Email Heading'
+      width: 50

@@ -1,0 +1,37 @@
+<section class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        <div class="lg:flex lg:gap-14">
+            <div class="w-full lg:w-1/2 {{ text_and_image_image_left ? 'lg:order-last' : '' }}">
+                {{ if text_and_image_heading }}
+                    <h2 class="text-4xl font-semibold font-manrope text-white mb-2">{{ text_and_image_heading }}</h2>
+                {{ /if }}
+
+                {{ if text_and_image_content  }}
+                    <p class="text-gray mt-4 lg:mt-6">
+                        {{ text_and_image_content }}
+                    </p>
+                {{ /if }}
+
+           
+                <div class="mt-3 lg:mt-3 flex justify-center lg:justify-start">
+                    {{ if text_and_image_button }}
+                        {{ text_and_image_button }}
+                            <a class="bg-gray text-black rounded-full mt-4 px-6 py-2 font-semibold shadow hover:bg-navy hover:text-gray transition-all duration-500" href="{{ link }}">{{ text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
+                        {{ /text_and_image_button }}
+                    {{ /if }}
+                </div>
+             
+            </div>
+
+            <div class="w-full lg:w-1/2 {{ text_and_image_image_left ? 'lg:order-first' : '' }}">
+                {{ if text_and_image_image }}
+                    {{ text_and_image_image }}
+                        <div class="flex lg:justify-end mt-8 lg:mt-0">
+                            <img loading="lazy" class="rounded-4xl object-cover w-full max-h-100 border border-white-opacity " src="{{ glide:url fit='crop_focal' format="webp" }}" alt="{{ alt }}">
+                        </div>
+                    {{ /text_and_image_image }}
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

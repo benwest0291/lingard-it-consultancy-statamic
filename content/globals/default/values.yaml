@@ -1,0 +1,30 @@
+heading: 'Our Values'
+values_replicator:
+  -
+    id: 8uSeIJAnPzl-uRPUbL9Az
+    icon: '<i class="fa-solid fa-eye text-orange text-xl"></i>'
+    heading: Mission
+    content: 'To empower businesses with innovative IT solutions that drive growth and efficiency.'
+    type: value
+    enabled: true
+  -
+    id: 71xL5tPnXQOA5lTiuJvWG
+    icon: '<i class="fa-solid fa-eye text-orange text-xl"></i>'
+    heading: Vison
+    content: 'To be the leading IT consultancy partner, recognized for excellence and innovation.'
+    type: value
+    enabled: true
+  -
+    id: cN3C79iBfzzIzlUvaurSa
+    icon: '<i class="fa-solid fa-handshake text-orange text-xl"></i>'
+    heading: Collaboration
+    content: 'We work closely with our clients to understand and meet their unique needs.'
+    type: value
+    enabled: true
+  -
+    id: '-DxSJFA54uxXVZiS7yC6w'
+    icon: '<i class="fa-solid fa-award text-orange text-xl"></i>'
+    heading: Excellence
+    content: 'We are committed to delivering the highest quality services and solutions.'
+    type: value
+    enabled: true

@@ -54,7 +54,42 @@ tabs:
                       fields:
                         -
                           import: frequently_asked_questions
-                          prefix: frequently_asked_questions_
+                          prefix: faq_
+                    thank_you:
+                      display: 'Thank You'
+                      icon: chart-monitoring-indicator
+                      fields:
+                        -
+                          import: thank_you
+                          prefix: thank_you_
+                    call_to_action:
+                      display: 'Call To Action'
+                      icon: layout-carousel-horizontal
+                      fields:
+                        -
+                          import: call_to_action
+                          prefix: call_to_action_
+                    text_and_image:
+                      display: 'Text And Image'
+                      icon: text-formatting-image-right
+                      fields:
+                        -
+                          import: text_and_image
+                          prefix: text_and_image_
+                    testimonials:
+                      display: Testimonials
+                      icon: quote
+                      fields:
+                        -
+                          import: testimonials
+                          prefix: testimonials_
+                    values:
+                      display: Values
+                      icon: star
+                      fields:
+                        -
+                          import: values
+                          prefix: values_
   sidebar:
     display: Sidebar
     sections:

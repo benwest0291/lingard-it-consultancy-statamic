@@ -1,0 +1,54 @@
+title: Values
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: heading
+            field:
+              type: text
+              display: Heading
+          -
+            handle: values_replicator
+            field:
+              type: replicator
+              display: 'Values Replicator'
+              sets:
+                value_card:
+                  display: 'Value Card'
+                  icon: heart
+                  sets:
+                    value:
+                      display: Value
+                      icon: heart
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            options:
+                              -
+                                key: '<i class="fa-solid fa-handshake text-orange text-xl"></i>'
+                                value: Handshake
+                              -
+                                key: '<i class="fa-solid fa-eye text-orange text-xl"></i>'
+                                value: Eye
+                              -
+                                key: '<i class="fa-solid fa-award text-orange text-xl"></i>'
+                                value: Award
+                              -
+                                key: '<i class="fa-solid fa-shield text-orange text-xl"></i>'
+                                value: Shield
+                            type: select
+                            display: Icon
+                        -
+                          handle: heading
+                          field:
+                            type: text
+                            display: Heading
+                        -
+                          handle: content
+                          field:
+                            type: textarea
+                            display: Content
