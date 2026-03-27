@@ -14,16 +14,16 @@ pages_replicator:
     type: breadcrumbs
     enabled: true
   -
-    id: 3GQQQe0XXn-KcyH5Uo4OK
+    id: x0-obU3XCwmFXmzbn7VPx
     services_entries:
       - 3be4a4e3-8fc2-4ab4-849e-833a6c501320
       - dfa11387-e984-4b36-b83c-545db304e2cf
       - 69b1391a-07ef-4d9b-b99e-dc87ba3a8243
-    type: servcies
-    enabled: true
     services_button:
       text: 'Book a Consolation'
       link: 'entry::5d25149a-22db-467c-9c9b-0b860511d6ad'
+    type: services
+    enabled: true
   -
     id: '--pf_BHmex3XnpL7vMCh7'
     call_to_action_heading: 'IT solutions that work with you'
@@ -37,5 +37,5 @@ pages_replicator:
       text: Resources
       link: 'entry::e3387760-b11a-4f22-9e4f-f08043737df2'
 updated_by: 6495e361-3c5a-48bf-8591-05aa0308e74f
-updated_at: 1774630592
+updated_at: 1774638940
 ---

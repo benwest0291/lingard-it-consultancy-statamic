@@ -36,6 +36,41 @@ tabs:
                         -
                           import: breadcrumbs
                           prefix: breadcrumbs_
+                    text_and_image:
+                      display: 'Text And Image'
+                      icon: text-formatting-image-right
+                      fields:
+                        -
+                          import: text_and_image
+                          prefix: text_and_image_
+                    services:
+                      display: Services
+                      icon: form-text-field
+                      fields:
+                        -
+                          import: services
+                          prefix: services_
+                    enquiries:
+                      display: Enquiries
+                      icon: money-bag-dollar
+                      fields:
+                        -
+                          import: enquiries
+                          prefix: enquiries_
+                    frequently_asked_questions:
+                      display: 'Frequently Asked Questions'
+                      icon: tabs-sections
+                      fields:
+                        -
+                          import: frequently_asked_questions
+                          prefix: faq_
+                    testimonials:
+                      display: Testimonials
+                      icon: quote
+                      fields:
+                        -
+                          import: testimonials
+                          prefix: testimonials_
   sidebar:
     display: Sidebar
     sections:

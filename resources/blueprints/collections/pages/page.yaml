@@ -90,12 +90,12 @@ tabs:
                         -
                           import: values
                           prefix: values_
-                    servcies:
-                      display: Servcies
+                    services:
+                      display: Services
                       icon: sliders-vertical
                       fields:
                         -
-                          import: services
+                          import: Services
                           prefix: services_
                     why:
                       display: Why

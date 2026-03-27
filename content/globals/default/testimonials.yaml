@@ -27,12 +27,3 @@ testimonials_replicator:
     job_title: 'Web Developer'
     type: card
     enabled: true
-  -
-    id: TvkiALGC5KRi3_BNDE1ih
-    content: 'Working with Lingard IT Consultancy has been an outstanding experience. Consistently delivering reliable, secure, and innovative solutions that align perfectly with our business needs.'
-    avatar:
-      - avatars/ben-west-1-4.png
-    name: 'Ben West'
-    job_title: 'Web Developer'
-    type: card
-    enabled: true
