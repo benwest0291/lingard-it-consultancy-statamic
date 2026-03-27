@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2384b8cc4ef869dbed11216a383026e",
+    "content-hash": "0045a7848cc8b07b4c7d2e6e0e2acf71",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -5229,16 +5229,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v6.7.1",
+            "version": "v6.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "4a357d03225cbf4800d6d01dcf04baced6c2151b"
+                "reference": "470e08f392abc79c88b71c78a146ec52fbd2fd07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/4a357d03225cbf4800d6d01dcf04baced6c2151b",
-                "reference": "4a357d03225cbf4800d6d01dcf04baced6c2151b",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/470e08f392abc79c88b71c78a146ec52fbd2fd07",
+                "reference": "470e08f392abc79c88b71c78a146ec52fbd2fd07",
                 "shasum": ""
             },
             "require": {
@@ -5350,7 +5350,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v6.7.1"
+                "source": "https://github.com/statamic/cms/tree/v6.7.3"
             },
             "funding": [
                 {
@@ -5358,7 +5358,61 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-18T22:23:32+00:00"
+            "time": "2026-03-25T18:24:45+00:00"
+        },
+        {
+            "name": "statamic/seo-pro",
+            "version": "v7.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/seo-pro.git",
+                "reference": "754e388f36dd1c4cbfe49ed10bcdd1fac0dc8d9d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/754e388f36dd1c4cbfe49ed10bcdd1fac0dc8d9d",
+                "reference": "754e388f36dd1c4cbfe49ed10bcdd1fac0dc8d9d",
+                "shasum": ""
+            },
+            "require": {
+                "pixelfear/composer-dist-plugin": "^0.1.6",
+                "statamic/cms": "^6.5"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.17",
+                "orchestra/testbench": "^10.0 || ^11.0",
+                "phpunit/phpunit": "^11.5.3 || ^12.0",
+                "spatie/laravel-ray": "^1.43.6"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Statamic\\SeoPro\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "SEO Pro",
+                    "description": "An all-in-one site reporting, metadata mastering, OG managing, Twitter card making, sitemap generating addon."
+                },
+                "download-dist": [
+                    {
+                        "url": "https://github.com/statamic/seo-pro/releases/download/{$version}/dist.tar.gz",
+                        "path": "resources/dist"
+                    }
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\SeoPro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/statamic/seo-pro/issues",
+                "source": "https://github.com/statamic/seo-pro/tree/v7.3.0"
+            },
+            "time": "2026-03-13T12:22:31+00:00"
         },
         {
             "name": "statamic/stringy",

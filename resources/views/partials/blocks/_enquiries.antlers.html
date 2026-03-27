@@ -1,0 +1,64 @@
+<section class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        {{ if enquiries_hide_details_center_form }}
+            <div class="min-h-[60vh] flex items-center justify-center">
+                <div class="w-full flex justify-center">
+                    {{ partial:partials/_enquiry_form }}
+                </div>
+            </div>
+        {{ else }}
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-18">
+                <div>
+                    {{ partial:partials/_enquiry_form }}
+                </div>
+                <div>
+                    {{ if enquiries_heading }}
+                        <h2 class="text-white mb-2 text-3xl">{{ enquiries_heading }}</h2>
+                    {{ /if }}
+
+                    {{ if enquiries_content }}
+                        <p class="text-gray mb-4">{{ enquiries_content }}</p>
+                    {{ /if }}
+
+                    <div class="p-8 bg-white-opacity rounded-4xl border border-white-opacity mb-4">
+                        {{ if company_details:phone_number }}
+                                <div class="flex gap-4">
+                                    <div class="flex items-center justify-center bg-white/50 rounded-xl w-12 h-12 border border-white-opacity">
+                                        <i class="fa-solid fa-phone text-orange text-xl"></i>
+                                    </div>
+
+                                    <div class="flex flex-col gap-1">
+                                        {{ if enquiries_call_heading }}
+                                            <span class="text-white font-manrope text-2xl font-semibold leading-tight">{{ enquiries_call_heading }}</span>
+                                        {{ /if }}
+                                        <a class="text-gray hover:text-white transition underline decoration-orange text-base font-medium" href="tel:{{ company_details:phone_number }}">{{ company_details:phone_number }}</a>
+
+                                        {{ if company_details:opening_hours }}
+                                            <span class="text-gray">{{ company_details:opening_hours }}</span>
+                                        {{ /if }}
+                                    </div>
+                                </div>
+                        {{ /if }}
+                    </div>
+
+                    <div class="p-8 bg-white-opacity rounded-4xl border border-white-opacity">
+                        {{ if company_details:email_address }}
+                            <div class="flex gap-4">
+                                <div class="flex items-center justify-center bg-white/50 rounded-xl w-12 h-12 border border-white-opacity">
+                                    <i class="fa-solid fa-envelope text-orange text-xl"></i>
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    {{ if enquiries_email_heading }}
+                                        <span class="text-white font-manrope text-2xl font-semibold leading-tight">{{ enquiries_email_heading }}</span>
+                                    {{ /if }}
+
+                                    <a class="text-gray hover:text-white transition underline decoration-orange text-base font-medium" href="mailto:{{ company_details:email_address }}">{{ company_details:email_address }}</a>
+                                </div>
+                            </div>
+                        {{ /if }}
+                    </div>
+                </div>
+            </div>
+        {{ /if }}
+    </div>
+</section>  

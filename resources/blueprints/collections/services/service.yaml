@@ -1,0 +1,118 @@
+title: Service
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: services_replicator
+            field:
+              type: replicator
+              display: 'Services Replicator'
+              sets:
+                banner:
+                  display: Banner
+                  icon: insert-image
+                  sets:
+                    banner:
+                      display: Banner
+                      icon: insert-image
+                      fields:
+                        -
+                          import: banner
+                          prefix: banner_
+                    breadcrumbs:
+                      display: Breadcrumbs
+                      icon: dots
+                      fields:
+                        -
+                          import: breadcrumbs
+                          prefix: breadcrumbs_
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: icon
+            field:
+              options:
+                -
+                  key: '<i class="fa-solid fa-bolt text-xl text-orange"></i>'
+                  value: Bolt
+                -
+                  key: '<i class="fa-solid fa-gears text-xl text-orange"></i>'
+                  value: Gears
+                -
+                  key: '<i class="fa-solid fa-rocket text-xl text-orange"></i>'
+                  value: Rocket
+                -
+                  key: '<i class="fa-solid fa-shield-halved text-xl text-orange"></i>'
+                  value: Shield
+                -
+                  key: '<i class="fa-solid fa-chart-line text-xl text-orange"></i>'
+                  value: Chart
+                -
+                  key: '<i class="fa-solid fa-cloud text-xl text-orange"></i>'
+                  value: Cloud
+                -
+                  key: '<i class="fa-solid fa-headset text-xl text-orange"></i>'
+                  value: Headset
+                -
+                  key: '<i class="fa-solid fa-code text-xl text-orange"></i>'
+                  value: Code
+              type: select
+              display: Icon
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+  'SEO Meta':
+    display: 'SEO Meta'
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO
+  'SEO Previews':
+    display: 'SEO Previews'
+    sections:
+      -
+        fields:
+          -
+            handle: seo_previews
+            field:
+              type: seo_pro_previews
+              listable: false
+              display: 'SEO Previews'
+              localizable: true
+              hide_display: true
+              unless:
+                seo.enabled: 'equals false'

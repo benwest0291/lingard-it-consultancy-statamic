@@ -1,0 +1,34 @@
+title: Enquiries
+fields:
+  -
+    handle: form_heading
+    field:
+      type: text
+      display: 'Form Heading'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: content
+    field:
+      type: textarea
+      display: Content
+  -
+    handle: call_heading
+    field:
+      type: text
+      display: 'Call Heading'
+      width: 50
+  -
+    handle: email_heading
+    field:
+      type: text
+      display: 'Email Heading'
+      width: 50
+  -
+    handle: hide_details_center_form
+    field:
+      type: toggle
+      display: 'Hide Details & Center Form'

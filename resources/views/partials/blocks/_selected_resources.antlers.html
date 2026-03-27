@@ -1,0 +1,43 @@
+<section  class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
+            <div>
+                {{ if selected_resources_heading }}
+                    <div class="font-manrope text-white text-3xl mb-4 font-bold">{{ selected_resources_heading }}</div>
+                {{ /if }}
+
+                {{ if selected_resources_content }}
+                    <p class="text-gray">{{ selected_resources_content }}</p>
+                {{ /if }}
+            </div>
+
+            <div>
+                {{ if selected_resources_button }}
+                    <div class="flex lg:justify-end mt-10">
+                        {{ selected_resources_button }}
+                            <a href="{{ selected_resources_button:link }}" class="bg-orange text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-white hover:text-orange transition-all duration-500">{{ selected_resources_button:text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
+                        {{ /selected_resources_button }}
+                    </div>
+                {{ /if }}
+            </div>
+           
+        </div>
+     
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+            {{ selected_resources_entries }}
+                <a title="{{ title }}" href="{{ url }}" class="group bg-white-opacity rounded-4xl border border-white-opacity block hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange">
+                    {{ featured_image }}
+                        <img src="{{ url }}" alt="{{ title }}" class="rounded-t-4xl w-full object-cover">
+                    {{ /featured_image }}
+                    
+                    <div class="p-4 flex items-center justify-between">
+                        <span class="text-white font-semibold my-4 text-2xl">{{ title }}</span>
+                        <span class="flex items-center justify-center bg-orange rounded-full w-10 h-10 ml-4">
+                            <i class="fa-solid fa-arrow-right text-white text-lg"></i>
+                        </span>
+                    </div>
+                </a>
+            {{ /selected_resources_entries }}
+        </div>
+    </div>
+</section>

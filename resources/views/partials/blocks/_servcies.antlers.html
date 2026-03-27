@@ -1,0 +1,29 @@
+<section  class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        {{ if services_heading }}
+            <div class="font-manrope text-white text-3xl mb-10 font-bold text-center">{{ services_heading }}</div>
+        {{ /if }}
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10">
+            {{ services_entries }}
+                <a href="{{ url }}" class="group block p-6 bg-white-opacity rounded-4xl border border-white-opacity hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange">
+                    <div class="flex items-center justify-center bg-white/50 rounded-xl w-12 h-12 border border-white-opacity">
+                        {{ icon }}
+                    </div>
+                    <div class="text-white font-semibold mt-4 text-2xl flex items-center justify-between">
+                        <span>{{ title }}</span>
+                    </div>
+                    <p class="text-gray mt-2">{{ excerpt }}</p>
+                </a>
+            {{ /services_entries }}
+        </div>
+
+       {{ if services_button }}
+            <div class="text-center mt-10">
+                {{ services_button }}
+                    <a href="{{ services_button:link }}" class="bg-orange text-white rounded-full px-6 py-2 font-semibold shadow hover:bg-white hover:text-orange transition-all duration-500">{{ services_button:text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
+                {{ /services_button }}
+            </div>
+       {{ /if }}
+    </div>
+</section>

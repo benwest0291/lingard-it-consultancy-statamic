@@ -1,0 +1,30 @@
+title: Services
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: entries
+    field:
+      collections:
+        - services
+      type: entries
+      display: Entries
+  -
+    handle: button
+    field:
+      type: group
+      display: Button
+      fields:
+        -
+          handle: text
+          field:
+            type: text
+            display: Text
+        -
+          handle: link
+          field:
+            type: link
+            display: Link

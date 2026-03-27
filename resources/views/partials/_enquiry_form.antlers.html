@@ -1,0 +1,61 @@
+<form 
+    class="p-8 bg-white-opacity rounded-4xl border border-white-opacitycan w-full mx-auto {{ if enquiries_hide_details_center_form }}max-w-lg{{ /if }}"
+    method="POST"
+    action="/contact"
+    x-data="{
+        submitting: false,
+        async submitForm(e) {
+            e.preventDefault();
+            this.submitting = true;
+            try {
+                const token = await grecaptcha.execute('{{ config:services:recaptcha:key }}', {action: 'contact'});
+                document.getElementById('recaptcha-token').value = token;
+                this.$el.submit();
+            } catch(err) {
+                this.submitting = false;
+            }
+        }
+    }"
+    @submit.prevent="submitForm"
+>
+    {{ if enquiries_form_heading }}
+        <h3 class="text-white mb-8 text-3xl">{{ enquiries_form_heading }}</h3>
+    {{ /if }}
+
+    <div class="mb-4">
+        <label for="first_name" class="block text-white mb-1 text-sm">First Name</label>
+        <input type="text" name="first_name" id="first_name" class="w-full rounded-2xl px-3 py-2 bg-white text-black" value="{{ old:first_name }}" required placeholder="Enter your first name">
+        {{ errors:first_name }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:first_name }}
+    </div>
+    <div class="mb-4">
+        <label for="last_name" class="block text-white mb-1 text-sm">Last Name</label>
+        <input type="text" name="last_name" id="last_name" class="w-full rounded-2xl px-3 py-2 bg-white text-black" value="{{ old:last_name }}" required placeholder="Enter your last name">
+        {{ errors:last_name }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:last_name }}
+    </div>
+    <div class="mb-4">
+        <label for="company" class="block text-white mb-1 text-sm">Company</label>
+        <input type="text" name="company" id="company" class="w-full rounded-2xl px-3 py-2 bg-white text-black" value="{{ old:company }}" required placeholder="Enter your company name">
+        {{ errors:company }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:company }}
+    </div>
+    <div class="mb-4">
+        <label for="email" class="block text-white mb-1 text-sm">Email</label>
+        <input type="email" name="email" id="email" class="w-full rounded-2xl px-3 py-2 bg-white text-black" value="{{ old:email }}" required placeholder="Enter your email address">
+        {{ errors:email }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:email }}
+    </div>
+    <div class="mb-4">
+        <label for="contact_number" class="block text-white mb-1 text-sm">Contact Number</label>
+        <input type="text" name="contact_number" id="contact_number" class="w-full rounded-2xl px-3 py-2 bg-white text-black" value="{{ old:contact_number }}" required placeholder="Enter your contact number">
+        {{ errors:contact_number }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:contact_number }}
+    </div>
+    <div class="mb-4">
+        <label for="message" class="block text-white mb-1 text-sm">Message</label>
+        <textarea name="message" id="message" class="w-full rounded-2xl px-3 py-2 bg-white text-black" rows="5" required placeholder="Type your message here">{{ old:message }}</textarea>
+        {{ errors:message }}<span class="text-red-500 text-sm">{{ value }}</span>{{ /errors:message }}
+    </div>
+    <input type="hidden" id="recaptcha-token" name="recaptcha_token">
+    <button type="submit" class="bg-orange text-white px-6 py-2 rounded-full font-semibold w-full" :disabled="submitting">
+        <span x-show="!submitting">Send</span>
+        <span x-show="submitting">Sending...</span>
+    </button>
+</form>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config:services:recaptcha:key }}"></script>

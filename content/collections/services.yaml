@@ -1,5 +1,16 @@
 title: Services
+icon: collections
+template: services/show
+layout: layout
+mount: 62b80068-deaf-4eb2-8680-ba6ea586ea2e
 revisions: false
-date_behavior:
-  past: public
-  future: private
+route: '{{ depth == 1 ?= mount }}/{{ parent_uri }}/{{ slug }}'
+date: true
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false

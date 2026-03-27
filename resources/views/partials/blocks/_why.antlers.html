@@ -1,0 +1,39 @@
+<section class="bg-black py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+            <div>
+                {{ if why_top_heading }}
+                    <div class="text-md font-semibold font-manrope text-gray mb-5">{{ why_top_heading }}</div>
+                {{ /if }}
+
+                {{ if why_heading }}
+                    <h2 class="text-4xl font-semibold font-manrope text-white mb-2">{{ why_heading }}</h2>
+                {{ /if }}
+
+                {{ if why_replicator  }}
+                    <div>
+                        {{ why_replicator }}
+                            <div class="flex items-start gap-4 mt-6">
+                                <div class="flex items-center justify-center bg-white/50 rounded-full w-12 h-12 aspect-square flex-shrink-0 border border-white-opacity text-white">
+                                    {{ $index + 1 }} 
+                                </div>
+                                <div>
+                                    <div class="text-white font-semibold text-lg">{{ heading }}</div>
+                                    <p class="text-gray mt-1">{{ content }}</p>
+                                </div>
+                            </div>
+                        {{ /why_replicator }}
+                    </div>
+                {{ /if }}
+            </div>
+
+            <div>
+                {{ if why_image }}
+                    {{ why_image }}
+                        <img loading="lazy" class="rounded-4xl object-cover w-full border border-white-opacity mt-5" src="{{ glide:url fit='crop_focal' format="webp" }}" alt="{{ alt }}">
+                    {{ /why_image }}
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>

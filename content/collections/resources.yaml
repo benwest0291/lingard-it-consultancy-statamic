@@ -1,14 +1,17 @@
 title: Resources
 icon: collections
-template: default
+template: resources/show
 layout: layout
+mount: e3387760-b11a-4f22-9e4f-f08043737df2
 revisions: false
+route: '{{ depth == 1 ?= mount }}/{{ parent_uri }}/{{ slug }}'
+date: true
 sort_dir: asc
-date_behavior:
-  past: null
-  future: null
 preview_targets:
   -
     label: Entry
     url: '{permalink}'
     refresh: true
+structure:
+  root: false
+  slugs: true

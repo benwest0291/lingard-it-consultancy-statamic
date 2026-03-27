@@ -14,6 +14,10 @@ pages_replicator:
     type: breadcrumbs
     enabled: true
   -
+    id: zEwZvnxJ8KN_Bha4CbaO4
+    type: resources_grid
+    enabled: true
+  -
     id: hSCSSI8GxiqinlYzS2LNa
     call_to_action_heading: 'IT solutions that work with you'
     call_to_action_content: 'Comprehensive IT solutions designed to drive innovation, enhance security, and accelerate your business growth.'
@@ -23,5 +27,5 @@ pages_replicator:
     type: call_to_action
     enabled: true
 updated_by: 6495e361-3c5a-48bf-8591-05aa0308e74f
-updated_at: 1774535153
+updated_at: 1774630586
 ---

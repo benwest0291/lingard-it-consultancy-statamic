@@ -1,0 +1,45 @@
+title: Why
+fields:
+  -
+    handle: top_heading
+    field:
+      type: text
+      display: 'Top Heading'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: replicator
+    field:
+      type: replicator
+      display: Replicator
+      sets:
+        list:
+          display: List
+          icon: list-ul
+          sets:
+            item:
+              display: Item
+              icon: node-connect
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: content
+                  field:
+                    type: textarea
+                    display: Content
+  -
+    handle: image
+    field:
+      container: assets
+      mode: grid
+      max_files: 1
+      min_files: 1
+      type: assets
+      display: Image

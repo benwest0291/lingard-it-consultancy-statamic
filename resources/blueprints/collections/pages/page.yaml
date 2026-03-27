@@ -90,6 +90,41 @@ tabs:
                         -
                           import: values
                           prefix: values_
+                    servcies:
+                      display: Servcies
+                      icon: sliders-vertical
+                      fields:
+                        -
+                          import: services
+                          prefix: services_
+                    why:
+                      display: Why
+                      icon: list-ul
+                      fields:
+                        -
+                          import: why
+                          prefix: why_
+                    enquiries:
+                      display: Enquiries
+                      icon: money-bag-dollar
+                      fields:
+                        -
+                          import: enquiries
+                          prefix: enquiries_
+                    selected_resources:
+                      display: 'Selected Resources'
+                      icon: layout-grid
+                      fields:
+                        -
+                          import: selected_resources
+                          prefix: selected_resources_
+                    resources_grid:
+                      display: 'Resources Grid'
+                      icon: fieldtype-grid
+                      fields:
+                        -
+                          import: resources_grid
+                          prefix: resources_grid_
   sidebar:
     display: Sidebar
     sections:
@@ -101,3 +136,29 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+  'SEO Meta':
+    display: 'SEO Meta'
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO
+  'SEO Previews':
+    display: 'SEO Previews'
+    sections:
+      -
+        fields:
+          -
+            handle: seo_previews
+            field:
+              type: seo_pro_previews
+              listable: false
+              display: 'SEO Previews'
+              localizable: true
+              hide_display: true
+              unless:
+                seo.enabled: 'equals false'
