@@ -111,7 +111,7 @@ html, body {
 .bard h5,
 .bard h6 {
     font-family: var(--font-manrope);
-    color: var(--color-black);
+    color: var(--color-white);
     font-weight: 700;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
@@ -126,6 +126,7 @@ html, body {
 
 .bard p {
     margin: 0 0 1em 0;
+    color: var(--color-gray);
 }
 
 .bard ul,
@@ -146,7 +147,7 @@ html, body {
 .bard blockquote {
     border-left: 4px solid var(--color-orange);
     background: var(--color-off-white);
-    color: var(--color-navy);
+    color: var(--color-white);
     margin: 1em 0;
     padding: 0.75em 1em;
     font-style: italic;
