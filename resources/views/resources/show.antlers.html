@@ -18,7 +18,9 @@
         <div class="prose prose-invert max-w-none my-8">
             {{ content }}
                 {{ if type == "text" }}
-                    {{{ text }}}
+                    <div class="bard">
+                        {{{ text }}}
+                    </div>
                 {{ /if }}
 
                 {{ if type == "image" }}
