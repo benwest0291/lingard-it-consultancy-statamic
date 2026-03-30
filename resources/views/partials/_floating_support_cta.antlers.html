@@ -1,0 +1,45 @@
+<div
+    class="fixed bottom-6 right-6 z-50"
+    x-data="{
+        phone: '{{ company_details:phone_number }}',
+        email: '{{ company_details:email_address }}',
+        isPhone: false,
+        init() {
+            const now = new Date();
+            const day = now.getDay();
+            const hour = now.getHours();
+            this.isPhone = (day >= 1 && day <= 5) && (hour >= 9 && hour < 17);
+        }
+    }"
+    x-init="init()"
+>
+    <!-- Phone CTA -->
+    <template x-if="isPhone">
+        <a :href="'tel:' + phone"
+           class="group flex items-center gap-3 bg-white rounded-2xl px-4 py-3 shadow-lg border border-gray-100 hover:-translate-y-0.5 transition-all duration-200">
+            <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-orange shrink-0">
+                <i class="fa-solid fa-phone text-white text-base"></i>
+            </div>
+            <div class="flex flex-col leading-tight">
+                <span class="text-sm font-bold text-gray-900">Call us now</span>
+                <span class="text-xs text-gray-400" x-text="phone"></span>
+            </div>
+            <span class="text-orange font-bold text-lg ml-1 group-hover:translate-x-0.5 transition-transform duration-200">›</span>
+        </a>
+    </template>
+
+    <!-- Email CTA -->
+    <template x-if="!isPhone">
+        <a :href="'mailto:' + email"
+           class="group flex items-center gap-3 bg-white rounded-2xl px-4 py-3 shadow-lg border border-gray-100 hover:-translate-y-0.5 transition-all duration-200">
+            <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-orange shrink-0">
+                <i class="fa-solid fa-envelope text-white text-base"></i>
+            </div>
+            <div class="flex flex-col leading-tight">
+                <span class="text-sm font-bold text-gray-900">Get support</span>
+                <span class="text-xs text-gray-400" x-text="email"></span>
+            </div>
+            <span class="text-orange font-bold text-lg ml-1 group-hover:translate-x-0.5 transition-transform duration-200">›</span>
+        </a>
+    </template>
+</div>

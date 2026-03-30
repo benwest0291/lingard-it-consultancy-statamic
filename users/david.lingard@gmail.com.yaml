@@ -1,5 +1,6 @@
 name: 'David Lingard'
 super: true
+avatar: avatars/david.png
 id: 6495e361-3c5a-48bf-8591-05aa0308e74f
 password_hash: $2y$12$Q90tHCAR5Wao8MWJ922nu.k.fP0s8kWpY45YOD6IlN62HUTgw2kfe
 preferences:

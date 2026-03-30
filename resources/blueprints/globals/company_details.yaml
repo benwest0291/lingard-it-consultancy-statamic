@@ -64,6 +64,12 @@ tabs:
               type: text
               display: 'Twitter X'
               width: 50
+          -
+            handle: show_corner_cta
+            field:
+              type: toggle
+              display: 'Show Corner CTA'
+              width: 50
   footer:
     display: Footer
     sections:
@@ -90,3 +96,19 @@ tabs:
             field:
               type: text
               display: 'Base Text'
+  scripts:
+    display: Scripts
+    sections:
+      -
+        display: Scripts
+        fields:
+          -
+            handle: header_script
+            field:
+              type: code
+              display: 'Header Script'
+          -
+            handle: footer_script
+            field:
+              type: code
+              display: 'Footer Script'

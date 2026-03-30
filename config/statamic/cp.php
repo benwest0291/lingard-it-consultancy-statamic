@@ -13,7 +13,7 @@ return [
 
     'enabled' => env('CP_ENABLED', true),
 
-    'route' => env('CP_ROUTE', 'cp'),
+    'route' => env('CP_ROUTE', 'cp-1986-secure'),
 
     /*
     |--------------------------------------------------------------------------
@@ -53,7 +53,37 @@ return [
     */
 
     'widgets' => [
-        //
+        [
+            'type' => 'form',
+            'form' => 'Enquiry',
+            'fields' => ['first_name', 'last_name', 'company', 'email', 'contact_number', 'message'],
+            'limit' => 5,
+            'width' => '50',
+        ],
+        [
+            'type' => 'seo_pro',
+            'width' => '50',
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'pages',
+            'limit' => 5,
+             'width' => '50',
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'resources',
+            'limit' => 5,
+             'width' => '50',
+        ],
+
+        [
+            'type' => 'collection',
+            'collection' => 'services',
+            'limit' => 5,
+             'width' => '50',
+        ],
+        
     ],
 
     /*
@@ -79,7 +109,7 @@ return [
     |
     */
 
-    'link_to_docs' => env('STATAMIC_LINK_TO_DOCS', true),
+    'link_to_docs' => env('STATAMIC_LINK_TO_DOCS', false),
 
     /*
     |--------------------------------------------------------------------------

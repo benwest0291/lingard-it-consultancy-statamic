@@ -22,10 +22,13 @@ pages_replicator:
     call_to_action_heading: 'IT solutions that work with you'
     call_to_action_content: 'Comprehensive IT solutions designed to drive innovation, enhance security, and accelerate your business growth.'
     call_to_action_button_one:
-      text: 'Book a Consolation'
-      link: 'entry::5d25149a-22db-467c-9c9b-0b860511d6ad'
+      text: 'View Services'
+      link: 'entry::62b80068-deaf-4eb2-8680-ba6ea586ea2e'
     type: call_to_action
     enabled: true
+    call_to_action_button_two:
+      text: 'Book a Consolation'
+      link: 'entry::5d25149a-22db-467c-9c9b-0b860511d6ad'
 updated_by: 6495e361-3c5a-48bf-8591-05aa0308e74f
-updated_at: 1774630586
+updated_at: 1774884710
 ---

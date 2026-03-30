@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0045a7848cc8b07b4c7d2e6e0e2acf71",
+    "content-hash": "f7b553d62c2d85c4c5ef532d8655cc74",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -68,6 +68,51 @@
                 "source": "https://github.com/ajthinking/archetype/tree/v2.0.0"
             },
             "time": "2024-05-11T08:05:58+00:00"
+        },
+        {
+            "name": "alt-design/alt-cookies",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alt-design/Alt-Cookies-Addon.git",
+                "reference": "0933a3a670e393b07b35cf22b32f9cc56018cf7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alt-design/Alt-Cookies-Addon/zipball/0933a3a670e393b07b35cf22b32f9cc56018cf7f",
+                "reference": "0933a3a670e393b07b35cf22b32f9cc56018cf7f",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "^4.0|^5.73.16|^6.7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AltDesign\\AltCookiesAddon\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Alt Cookies",
+                    "description": "Alt Cookies"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltDesign\\AltCookiesAddon\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Helps handle scripts and cookies on your Statamic site",
+            "support": {
+                "issues": "https://github.com/alt-design/Alt-Cookies-Addon/issues",
+                "source": "https://github.com/alt-design/Alt-Cookies-Addon/tree/v1.2.1"
+            },
+            "time": "2026-03-26T10:18:55+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
@@ -5229,16 +5274,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v6.7.3",
+            "version": "v6.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "470e08f392abc79c88b71c78a146ec52fbd2fd07"
+                "reference": "d62b8f6df992bcbc26dffe91a17cdffddd56e122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/470e08f392abc79c88b71c78a146ec52fbd2fd07",
-                "reference": "470e08f392abc79c88b71c78a146ec52fbd2fd07",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d62b8f6df992bcbc26dffe91a17cdffddd56e122",
+                "reference": "d62b8f6df992bcbc26dffe91a17cdffddd56e122",
                 "shasum": ""
             },
             "require": {
@@ -5350,7 +5395,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v6.7.3"
+                "source": "https://github.com/statamic/cms/tree/v6.8.0"
             },
             "funding": [
                 {
@@ -5358,7 +5403,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-25T18:24:45+00:00"
+            "time": "2026-03-27T20:38:39+00:00"
         },
         {
             "name": "statamic/seo-pro",

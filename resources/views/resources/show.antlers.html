@@ -1,0 +1,38 @@
+<section class="py-8 bg-black">
+    <div class="container mx-auto px-4 lg:px-54">
+        {{ if banner_image }}
+            {{ banner_image }}
+                <img class="w-full h-[450px] object-cover bg-white-opacity rounded-4xl border border-white-opacity" src="{{ url }}" alt="{{ alt }}">
+            {{ /banner_image }}
+        {{ /if }}
+
+        <h1 class="text-white text-4xl font-bold my-5">{{ title }}</h1>
+
+        {{ author }}
+            <div class="author flex items-center gap-2">
+                <img src="{{ avatar }}" alt="{{ name }}'s avatar" class="w-12 h-12 rounded-full" />
+                <span class="text-gray">{{ name }}</span>
+            </div>
+        {{ /author }}
+
+        <div class="prose prose-invert max-w-none my-8">
+            {{ content }}
+                {{ if type == "text" }}
+                    {{{ text }}}
+                {{ /if }}
+
+                {{ if type == "image" }}
+                    <figure class="my-6">
+                        {{ image }}
+                            <img class="w-full h-[400px] rounded-4xl object-cover bg-white-opacity rounded-4xl border border-white-opacity" src="{{ url }}" alt="{{ alt }}" />
+                        {{ /image }}
+                    </figure>
+                {{ /if }}
+
+                {{ if type == "enquiries" }}
+                       {{ partial:partials/blocks/enquiries }}
+                {{ /if }}
+            {{ /content }}
+        </div>
+    </div>
+</section>

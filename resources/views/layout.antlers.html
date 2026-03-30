@@ -14,12 +14,28 @@
 
         <!-- Alpine.js -->
         <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+        {{ if company_details:header_script }}
+            {{ company_details:header_script }}
+        {{ /if }}
     </head>
     <body>
         {{ partial:header }}
-
-        {{ template_content }}
+        
+        <div class="mt-20">
+              {{ template_content }}
+        </div>
 
         {{ partial:footer }}
+
+        {{ if company_details:show_corner_cta }}
+            {{ partial:_floating_support_cta }}
+        {{ /if }}
+
+        {{ AltCookies:Toast }}
+
+        {{ if company_details:footer_script }}
+            {{ company_details:footer_script}}
+        {{ /if }}
     </body>
 </html>

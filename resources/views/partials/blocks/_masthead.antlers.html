@@ -2,26 +2,26 @@
     <div class="container mx-auto px-4 py-20 masthead-bg-image">
         <div class="flex justify-center flex-col items-center">
             {{ if masthead_heading }}
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white lg:w-1/2 text-center">{{ masthead_heading }}</h1>
+                <h1 data-masthead="heading" class="opacity-0 text-4xl md:text-6xl font-bold mb-6 text-white lg:w-1/2 text-center">{{ masthead_heading }}</h1>
             {{ /if }}
 
             {{ if masthead_content }}
-                <p class="text-lg md:text-xl text-gray mb-8 lg:w-1/2 text-center">{{ masthead_content }}</p>
+                <p data-masthead="content" class="opacity-0 text-lg md:text-xl text-gray mb-8 lg:w-1/2 text-center">{{ masthead_content }}</p>
             {{ /if }}
         </div>
 
         <div class="flex justify-center gap-4 mt-8">
             {{ if masthead_button_one }}
-                <a class="flex items-center bg-orange text-white rounded-full px-6 py-2 font-semibold shadow transition-all duration-500 text-sm md:text-base lg:text-lg hover:bg-white hover:text-orange group" href="{{ masthead_button_one:link }}">{{ masthead_button_one:text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
+                <a data-masthead="btn-1" class="opacity-0 flex items-center bg-orange text-white rounded-full px-6 py-2 font-semibold shadow transition-all duration-500 text-sm md:text-base lg:text-lg hover:bg-white hover:text-orange group" href="{{ masthead_button_one:link }}">{{ masthead_button_one:text }}<i class="fa-solid fa-arrow-right ms-2 transition-all duration-500 group-hover:text-orange"></i></a>
             {{ /if }}
 
              {{ if masthead_button_two }}
-                <a class="bg-gray text-black rounded-full px-6 py-2 font-semibold shadow hover:bg-navy hover:text-gray transition-all duration-500 text-sm md:text-base lg:text-lg" href="{{ masthead_button_two:link }}">{{ masthead_button_two:text }}</a>
+                <a data-masthead="btn-2" class="opacity-0 bg-gray text-black rounded-full px-6 py-2 font-semibold shadow hover:bg-navy hover:text-gray transition-all duration-500 text-sm md:text-base lg:text-lg" href="{{ masthead_button_two:link }}">{{ masthead_button_two:text }}</a>
             {{ /if }}
         </div>
 
         {{ if company_details:strapline }}
-            <p class="text-gray mt-10 text-center lg:text-left">{{ company_details:strapline }}</p>
+            <p data-masthead="strapline" class="opacity-0 text-gray mt-10 text-center lg:text-left">{{ company_details:strapline }}</p>
         {{ /if }}
     </div>
 </section>

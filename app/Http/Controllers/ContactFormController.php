@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Http;
 use Statamic\Facades\Form;
+use Statamic\Facades\GlobalSet;
+use Illuminate\Support\Facades\Mail;
 
 class ContactFormController extends Controller{ 
     
@@ -54,7 +56,29 @@ class ContactFormController extends Controller{
             ]);
             $submission->save();
 
-            return redirect('/thank-you') ->with('success', 'Form submitted successfully.');
+            // Get company email from global
+            $companyEmail = GlobalSet::findByHandle('company_details')
+                ->inDefaultSite()
+                ->get('email_address');
+
+            // Send email to company address
+            if ($companyEmail) {
+                Mail::raw(
+                    "New contact form submission:\n\n" .
+                    "First Name: {$request->first_name}\n" .
+                    "Last Name: {$request->last_name}\n" .
+                    "Email: {$request->email}\n" .
+                    "Company: {$request->company}\n" .
+                    "Contact Number: {$request->contact_number}\n" .
+                    "Message: {$request->message}",
+                    function ($message) use ($companyEmail) {
+                        $message->to($companyEmail)
+                                ->subject('New Contact Form Submission');
+                    }
+                );
+            }
+
+            return redirect('/thank-you')->with('success', 'Form submitted successfully.');
 
         } catch (\Exception $e) {
             return redirect()->back()

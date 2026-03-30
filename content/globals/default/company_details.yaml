@@ -1,4 +1,4 @@
-logo: logos/whatsapp-image-2026-03-17-at-11.05.25-2.png
+logo: lingard-white.png
 textarea: 'We keep your business online, secure, and running smoothly — with proactive support and zero jargon.'
 strapline: 'Trusted By Business Worldwide'
 opening_hours: 'Mon-Fri 8:00 AM - 5:00 PM'
@@ -7,7 +7,20 @@ email_address: info@lingarditconsultancy.co.uk
 linkedin: 'https://www.linkedin.com/'
 facebook: 'https://www.facebook.com/'
 twitter_x: 'https://www.x.com/'
+show_corner_cta: true
 column_one_heading: Services
 column_two_heading: 'More Info'
 column_three_heading: 'Useful Links'
 base_text: 'Lingard IT Consultancy. All Rights Reserved.'
+header_script:
+  code: |-
+    <script>
+    console.log('Hello David, welcome to your new website')  
+    </script>
+  mode: javascript
+footer_script:
+  code: |-
+    <script>
+    console.log('Hopefully you like it lol if not im not changing it 😂')  
+    </script>
+  mode: javascript

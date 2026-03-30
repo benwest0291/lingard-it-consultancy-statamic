@@ -78,7 +78,7 @@ html, body {
     bottom: 70px;
     height: 600px;
     width: 420px;
-    background-image: url('http://127.0.0.1:8000/assets/code/g-40.png');
+    background-image: url('http://127.0.0.1:8000/assets/code/bg-new.png');
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;

@@ -12,6 +12,69 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: banner_image
+            field:
+              container: assets
+              type: assets
+              display: 'Banner Image'
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+                - h1
+                - h4
+                - h5
+                - h6
+                - underline
+                - strikethrough
+                - small
+                - superscript
+                - subscript
+                - code
+                - codeblock
+                - horizontalrule
+                - alignleft
+                - aligncenter
+                - alignright
+                - alignjustify
+              container: assets
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              sets:
+                image:
+                  display: Image
+                  icon: insert-image
+                  sets:
+                    image:
+                      display: Image
+                      icon: insert-image
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: Image
+                    enquiries:
+                      display: Enquiries
+                      icon: money-bag-dollar
+                      fields:
+                        -
+                          import: enquiries
+                          prefix: enquiries_
   sidebar:
     display: Sidebar
     sections:
@@ -29,6 +92,19 @@ tabs:
               container: assets
               type: assets
               display: 'Featured Image'
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: author
+            field:
+              type: users
+              display: Author
   'SEO Meta':
     display: 'SEO Meta'
     sections:
