@@ -16,7 +16,7 @@
                     {{ /if }}
 
                     <div>
-                        {{ if company_details:phone_number }}
+                        {{ if !company_details:hide_number && company_details:phone_number }}
                             <div class="flex items-center mt-10">
                                 <i class="fa-solid fa-phone text-white me-2 text-lg"></i>
                                 <a class="text-gray hover:text-white transform transition-all underline decoration-orange" href="tel:{{ company_details:phone_number }}">{{ company_details:phone_number }}</a>
@@ -24,7 +24,7 @@
                         {{ /if }}
 
                         {{ if company_details:email_address }}
-                            <div class="flex items-center mt-2">
+                            <div class="flex items-center {{ if !company_details:hide_number && company_details:phone_number }}mt-2{{ else }}mt-10{{ /if }}">
                                 <i class="fa-solid fa-envelope text-white me-2 text-lg"></i>
                                 <a class="text-gray hover:text-white transform transition-all underline decoration-orange" href="mailto:{{ company_details:email_address }}">{{ company_details:email_address }}</a>
                             </div>

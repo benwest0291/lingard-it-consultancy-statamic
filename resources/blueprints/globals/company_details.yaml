@@ -41,6 +41,12 @@ tabs:
               display: 'Phone Number'
               width: 50
           -
+            handle: hide_number
+            field:
+              type: toggle
+              display: 'Hide Number'
+              width: 50
+          -
             handle: email_address
             field:
               type: text

@@ -55,7 +55,7 @@ return [
     'widgets' => [
         [
             'type' => 'form',
-            'form' => 'Enquiry',
+            'form' => 'enquiry',
             'fields' => ['first_name', 'last_name', 'company', 'email', 'contact_number', 'message'],
             'limit' => 5,
             'width' => '50',

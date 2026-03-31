@@ -2,6 +2,7 @@
     class="fixed bottom-6 right-6 z-50"
     x-data="{
         phone: '{{ company_details:phone_number }}',
+        hideNumber: {{ company_details:hide_number ?? 'false' }},
         email: '{{ company_details:email_address }}',
         isPhone: false,
         init() {
@@ -14,7 +15,7 @@
     x-init="init()"
 >
     <!-- Phone CTA -->
-    <template x-if="isPhone">
+    <template x-if="isPhone && !hideNumber && phone">
         <a :href="'tel:' + phone"
            class="group flex items-center gap-3 bg-white rounded-2xl px-4 py-3 shadow-lg border border-gray-100 hover:-translate-y-0.5 transition-all duration-200">
             <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-orange shrink-0">
@@ -29,7 +30,7 @@
     </template>
 
     <!-- Email CTA -->
-    <template x-if="!isPhone">
+    <template x-if="!isPhone || hideNumber || !phone">
         <a :href="'mailto:' + email"
            class="group flex items-center gap-3 bg-white rounded-2xl px-4 py-3 shadow-lg border border-gray-100 hover:-translate-y-0.5 transition-all duration-200">
             <div class="flex items-center justify-center w-9 h-9 rounded-xl bg-orange shrink-0">
