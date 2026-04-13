@@ -25,8 +25,8 @@ class ContactFormController extends Controller{
             'last_name' => 'required|string|max:255',
             'email' => 'required|email',
             'company' => 'nullable|string|max:255',
-            'contact_number' => 'required|string',
-            'message' => 'nullable|string',
+            'contact_number' => 'nullable|string',
+            'message' => 'required|string',
             'recaptcha_token' => 'required',
         ]);
 
